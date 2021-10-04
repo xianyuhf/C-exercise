@@ -1,0 +1,16 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main()
+{
+    	double v1=14;
+	double v2=11;
+	double v3=24;
+	double v4=9;
+	double v5=17;
+	double v6=7;
+	double a=v2/v3*log10(v2/v1)+v2/v3*log10(v2/v4);
+	double b=v5/v3*log10(v5/v1)+v6/v3*log10(v6/v4);
+	cout<<a+b<<endl;
+	return 0;
+}

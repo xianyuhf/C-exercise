@@ -1,0 +1,17 @@
+//头文件 <string.h>
+
+#include<iostream>
+#include<cstring>
+using namespace std;
+int main()
+{
+    char sentence[]="This is a sentence with 7 tokens";
+    cout << "The string to be tokenized is:\n" << sentence << "\n\nThe tokens are:\n\n";
+    char *tokenPtr=strtok(sentence," ");//每次只能找到一个
+    while(tokenPtr!=NULL)　{
+        cout<<tokenPtr<<endl;
+        tokenPtr=strtok(NULL," ");//这是对最后一个进行处理
+    }
+    //cout << "After strtok,sentence=" << tokenPtr<<endl;
+    return 0;
+}

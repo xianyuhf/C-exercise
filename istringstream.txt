@@ -1,0 +1,43 @@
+https://www.cnblogs.com/dfyz/p/6759427.html
+
+#include <iostream>
+#include <sstream>
+#include <string>
+using namespace std;
+
+void test()
+{
+    {
+        //istringstream iss;
+        //iss.str("#123 1.23 aaa ,zzz kk,k oo.jjj");
+        istringstream iss("#123 1.23 aaa ,zzz kk,k oo.jjj");
+        
+        cout << iss.str() << endl;
+
+        char ch;
+        iss >> ch;
+        cout << ch << endl;
+
+        int i;
+        iss >> i;
+        cout << i << endl;
+
+        float f;
+        iss >> f;
+        cout << f << endl;
+
+        char buf[1024];
+        iss >> buf;
+        cout << buf << endl;
+
+        iss.ignore(100, ',');//ignore 忽略前100个字符或者忽略第一个逗号前面的内容包含第一个逗号，然后显示删除内容之后到第一个空格之间的字符。
+        iss >> buf;
+        cout << buf << endl;
+    }
+}
+
+int main(int argc, char* argv[])
+{   
+    test();
+    return 0;
+}
